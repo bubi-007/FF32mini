@@ -240,7 +240,7 @@ void processFlightCommands(void)
 
 	// Simple Mode Command Processing
 
-	if (rxCommand[AUX3] > MIDCOMMAND)
+	if (rxCommand[AUX3] > MIDCOMMAND && armed)
 	{
         hdgDelta = sensors.attitude500Hz[YAW] - homeData.magHeading;
 
